@@ -1,7 +1,7 @@
-*.git
-*.settings
-bin
-target
+.git
+.settings
+bin/
+target/
 .classpath
 .project
 pom.xml
