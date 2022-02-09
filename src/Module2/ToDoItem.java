@@ -1,35 +1,37 @@
 package Module2;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+
 /**
  * Defines a ToDoItem class. A ToDoItem contains a string representing a task to do
  * @author Sam
  *
  */
+@Entity(name="ToDoList")
 public class ToDoItem {
-	String todo;
+	@Id
+	String task;
 	
+	public String getTask() {
+		return task;
+	}
+
+	public void setTask(String task) {
+		this.task = task;
+	}
+	
+	public ToDoItem() {
+		
+	}
+
 	/**
 	 * Constructor for a ToDoItem
 	 * @param s String to represent the item
 	 */
 	public ToDoItem(String s) {
-		setToDo(s);
-	}
-	
-	/**
-	 * Private method to set to-do item
-	 * @param s
-	 */
-	private void setToDo(String s) {
-		this.todo = s;
-	}
-	
-	/**
-	 * Getter method for to-do item
-	 * @return returns to-do item
-	 */
-	public String getToDo() {
-		return todo;
+		setTask(s);
 	}
 	
 	/**
@@ -37,6 +39,6 @@ public class ToDoItem {
 	 */
 	@Override
 	public String toString() {
-		return todo;
+		return task;
 	}
 }
