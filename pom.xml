@@ -5,22 +5,22 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>CEN4025</name>
   <description>Project containing assignments for Software Dev 2 (CEN 4025) course</description>
-  
-<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+
 <dependencies>
+	<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
 	<dependency>
-	   <groupId>org.hibernate.orm</groupId>
-	   <artifactId>hibernate-core</artifactId>
-	   <version>6.0.0.CR1</version>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>6.0.0.CR1</version>
 	</dependency>
-	
 	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 	<dependency>
 	    <groupId>mysql</groupId>
 	    <artifactId>mysql-connector-java</artifactId>
 	    <version>8.0.25</version>
 	</dependency>
-</dependencies>
+</dependencies> 
+
 
   <build>
     <sourceDirectory>src</sourceDirectory>

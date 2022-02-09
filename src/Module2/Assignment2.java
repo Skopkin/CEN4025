@@ -2,6 +2,11 @@ package Module2;
 
 import java.util.Scanner;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+
 /**
  * @author Sam Kopkin
  *
@@ -14,6 +19,12 @@ public class Assignment2 {
 	public static void main(String[] args) {
 		ToDoList list = new ToDoList();
 		Scanner input = new Scanner(System.in);
+		
+		Configuration config = new Configuration();
+		
+		SessionFactory sf = config.buildSessionFactory();
+		
+		Session session = sf.openSession();
 		
 		final String menuText = "1. Add a to-do item\n"
 				+ "2. Delete a to-do item\n"
