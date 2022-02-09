@@ -12,6 +12,11 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
+/**
+ * Class that interfaces with a local MySQL database for use with the ToDoItem class
+ * @author Sam
+ *
+ */
 public class HibernateDb {
 	private static Configuration config;
 	private static ServiceRegistry reg;
@@ -24,6 +29,11 @@ public class HibernateDb {
 		sf = config.buildSessionFactory(reg);
 	}
 	
+	/**
+	 * Adds an item to the database
+	 * @param item ToDoItem to be added
+	 * @return True if added successfully, false if it fails
+	 */
 	@SuppressWarnings("deprecation")
 	public boolean addItem(ToDoItem item) {
 		boolean success = false;
@@ -47,6 +57,11 @@ public class HibernateDb {
 		return success;
 	}
 	
+	/**
+	 * Removes an item from the database
+	 * @param s Task to be added
+	 * @return True if removed successfully, false if it fails
+	 */
 	@SuppressWarnings("deprecation")
 	public boolean removeItem(String s) {
 		boolean success = false;
@@ -73,6 +88,10 @@ public class HibernateDb {
 		return success;
 	}
 	
+	/**
+	 * Queries the database for a current list of ToDoItems
+	 * @return an ArrayList of the results
+	 */
 	public ArrayList<ToDoItem> updateList() {
 		ArrayList<ToDoItem> newList = new ArrayList<ToDoItem>();
 		session = sf.openSession();

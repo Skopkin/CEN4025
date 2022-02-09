@@ -14,14 +14,25 @@ public class ToDoItem {
 	@Id
 	String task;
 	
+	/**
+	 * Getter method for the task
+	 * @return task string
+	 */
 	public String getTask() {
 		return task;
 	}
 
+	/**
+	 * Setter method for the task
+	 * @param task
+	 */
 	public void setTask(String task) {
 		this.task = task;
 	}
 	
+	/**
+	 * Default constructor
+	 */
 	public ToDoItem() {
 		
 	}
